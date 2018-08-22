@@ -1,0 +1,9 @@
+{
+	"documents": [
+		{"id": 123, "title": "Lorem ipsum dolor 1", "file": "405kb", "icon":  "http://localhost/bimtool/frontend/dist/img/icons/pdf.png"},
+		{"id": 223, "title": "Lorem ipsum dolor 2", "file": "225kb", "icon":  "http://localhost/bimtool/frontend/dist/img/icons/revit.png"},
+		{"id": 323, "title": "Lorem ipsum dolor 3", "file": "565kb", "icon":  "http://localhost/bimtool/frontend/dist/img/icons/pdf.png"},
+		{"id": 423, "title": "Lorem ipsum dolor 4", "file": "125kb", "icon":  "http://localhost/bimtool/frontend/dist/img/icons/autocad.png"},
+		{"id": 523, "title": "Lorem ipsum dolor 5", "file": "325kb", "icon":  "http://localhost/bimtool/frontend/dist/img/icons/sketchup.png"}
+	]
+}

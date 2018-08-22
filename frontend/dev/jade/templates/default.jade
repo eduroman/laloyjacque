@@ -1,0 +1,33 @@
+include ../includes/mixins
+include ../includes/sections
+include ../includes/articles
+doctype html
+html(lang='es')
+	head
+		title Bimtool
+		meta(charset="UTF-8")
+		link(href='img/favicon.png', rel='shortcut icon')
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(href='css/main.css', rel='stylesheet', type='text/css')
+		script(src='js/main.js', type='text/javascript')
+		// Meta tags facebook
+		meta(property='og:title', content="#")
+		meta(property='og:description', content="#")
+		meta(property='og:image', content="#")
+
+		// Meta tags twitter cards
+		meta(name='twitter:card', content="summary_large_image")
+		meta(name='twitter:title', content="#")
+		meta(name='twitter:description', content="#")
+		meta(name='twitter:image', content="#")
+		link(href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet")
+		//[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]
+
+
+
+	body
+		include ../includes/header
+		#sections
+			block page
+		include ../includes/footer

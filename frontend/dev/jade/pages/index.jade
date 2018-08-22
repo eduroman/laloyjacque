@@ -1,0 +1,114 @@
+extends ../templates/default.jade
+block page
+
+	section.section--main.section--dark
+		.section__slider
+			.slider.slider--cover
+				.slides
+					.slide: .section__bg: .bg: img(src="uploads/1.jpg")
+					.slide: .section__bg: .bg: img(src="uploads/2.jpg")
+					.slide: .section__bg: .bg: img(src="uploads/3.jpg")
+		.section__wrap
+			.section__content
+				h1.section__title Los productos para tu proyecto de <strong>arquitectura</strong> están en Bimtool
+				.section__search
+					form(action="#" method="get")
+						input(type="text" name="s" placeholder="Busca un producto o material...")
+						button
+							span.fa.fa-search
+				a.btn.btn--link.btn--link--white(href="catalog.html") Ver catálogo completo
+					span.fa.fa-angle-right
+
+
+	section.section--boxs.section--offset-top.section--transparent
+		.section__wrap.section__wrap--sm
+			.cols.cols-scroll
+				.col-md-4
+					+articleBox(1, "Participar")
+				.col-md-4
+					+articleBox(2, "Ver más")
+				.col-md-4
+					+articleBox(1, "Ver más")
+
+
+	section.section--products
+		.section__wrap
+			.section--tabs
+				.tabs.dscroll
+					h2.section__title Productos
+					.tabs__header.tabs__header--right
+						.tab Destacados
+						.tab Más descargados
+						.tab Más vistos
+					.tabs__body
+						+loop(3)
+							.tab
+								.cols.cols-gutter-min
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(1,"Assay Abloy / Puertas","Puerta Cortafuego sentido encontrado RF 120 ODIS")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(2,"Femoglas / Cubiertas onduladas","Panel PV6 / PT-60 (FRP)")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(3,"Polymerland / Túneles solares","Revestimiento acústico para cielo diseño Dispar 8")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(4,"Assay Abloy / Puertas","Puerta Cortafuego sentido encontrado RF 120 ODIS")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(5,"Femoglas / Cubiertas onduladas","Panel PV6 / PT-60 (FRP)")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(6,"Polymerland / Túneles solares","Revestimiento acústico para cielo diseño Dispar 8")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(7,"Assay Abloy / Puertas","Puerta Cortafuego sentido encontrado RF 120 ODIS")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(8,"Femoglas / Cubiertas onduladas","Panel PV6 / PT-60 (FRP)")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(1,"Polymerland / Túneles solares","Revestimiento acústico para cielo diseño Dispar 8")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(2,"Assay Abloy / Puertas","Puerta Cortafuego sentido encontrado RF 120 ODIS")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(3,"Femoglas / Cubiertas onduladas","Panel PV6 / PT-60 (FRP)")
+									.col-sm-12.col-md-6.col-lg-4
+										+articleProduct(4,"Polymerland / Túneles solares","Revestimiento acústico para cielo diseño Dispar 8")
+
+
+			.section__button.dscroll
+				a.btn.btn--light(href="#") Ver catálogo completo
+					span.fa.fa-angle-right
+
+			.section__formats.dscroll
+				h3.section__title Encuentralos en formato:
+				.section__formats--list.dscroll
+					+articleFormat("revit", "Revit")
+					+articleFormat("sketchup", "SketchUp")
+					+articleFormat("autocad", "Autocad")
+					+articleFormat("pdf", "PDF")
+					+articleFormat("revit", "Revit")
+					+articleFormat("sketchup", "SketchUp")
+					+articleFormat("autocad", "Autocad")
+					+articleFormat("pdf", "PDF")
+
+
+	section.section--news.section--light
+		.section__wrap
+			.section--tabs
+				.tabs.dscroll
+					h2.section__title.dscroll Noticias
+					.tabs__header.tabs__header--right
+						.tab Noticias
+						.tab Casos de estudio
+						.tab Tutoriales
+					.tabs__body
+						+loop(3)
+							.tab
+								.cols.cols-scroll
+									.col-md-6.col-lg-4
+										+articleNews(3, "Bimtool realiza viaje a argentina para presentar los avances de la plataforma a importantes...")
+									.col-md-6.col-lg-4
+										+articleNews(2, "Bimtool.com cierra acuerdo de colaboración con Sentio VR")
+									.col-md-6.col-lg-4
+										+articleNews(1, "Bimtool realiza viaje a argentina para presentar los avances de la plataforma a importantes...")
+									.col-md-6.col-lg-4
+										+articleNews(3, "Bimtool.com cierra acuerdo de colaboración con Sentio VR ")
+									.col-md-6.col-lg-4
+										+articleNews(2, "Bimtool realiza viaje a argentina para presentar los avances de la plataforma a importantes...")
+									.col-md-6.col-lg-4
+										+articleNews(1, "Bimtool.com cierra acuerdo de colaboración con Sentio VR ")

@@ -1,0 +1,165 @@
+
+header
+
+	.header__bar
+
+		.header__wrap
+
+			a.header__logo(href="index.html")
+				img(src="img/logo-bimtool.png")
+
+			.header__right
+				.header__search
+					form(action="#" method="get")
+						span.fa.fa-search
+						input(type="text" name="s" placeholder="Buscar...")
+				.header__option
+					a.header__option__search
+						span.fa.fa-search
+					a.header__option__cart(href="cart.html")
+						span.fa.fa-shopping-cart
+					a.header__option__country
+						span.fa.fa-globe
+						ul
+							li
+								a(href="#")
+									img(src="img/chile.png")
+							li
+								a(href="#")
+									img(src="img/colombia.png")
+	
+				.header__login(modal-open=".modal--login")
+					a(href="#")
+						span.fa.fa-user
+					ul
+						li: a.btn.btn--color.btn--block(href="project.html") Proyectos
+						li: a.btn.btn--color.btn--block(href="#") Cerrar sesión
+						
+
+				.header__ham
+					.header__ham__line
+					.header__ham__line
+					.header__ham__line
+
+			.header__nav
+				.header__bg
+					.bg: img(src="uploads/1.jpg")
+				.header__nav__logo
+					.header__nav__img
+						img(src="img/logo-bimtool-white.png")
+					p.header__description Bimtool es el repositorio más grande de productos para la construcción y la arquitectura.
+				nav
+					ul
+						li(data-fullnav="catalog"): a(href="catalog.html") Catálogo de productos
+							span.fa.fa-angle-down
+						li(data-fullnav="brands"): a(href="#") Marcas
+							span.fa.fa-angle-down
+						li
+							a(href="#") Herramientas
+								span.fa.fa-angle-down
+							ul
+								li: a(href="#") Casos de estudio
+								li: a(href="#") Inventario
+								li: a(href="#") Tutoriales
+								li: a(href="#") Eventos / Cursos / Webinars
+								li: a(href="#") Normas Técnicas
+						li: a(href="#") ¿Eres Fabricante?
+
+	.header__fullnav.header__fullnav--catalog
+		.header__fullnav__bg
+		.header__fullnav__inner
+
+			.cols
+				.col-md-5
+					.header__fullnav__nav
+						nav
+							ul
+								li
+									a(href="catalog.html") Equipamiento
+									ul
+										li: a(href="catalog.html") Baño
+											span.header__fullnav__counter: +num(50)
+										li: a(href="catalog.html") Cocina
+											span.header__fullnav__counter: +num(50)
+										li: a(href="catalog.html") Decoración
+											span.header__fullnav__counter: +num(50)
+										li: a(href="catalog.html") Iluminación
+											span.header__fullnav__counter: +num(50)
+										li: a(href="catalog.html") Mobiliario
+											span.header__fullnav__counter: +num(50)
+										li: a(href="catalog.html") Señaléticas
+											span.header__fullnav__counter: +num(50)
+										li: a(href="catalog.html") Tecnología
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Escaleras
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Instalaciones
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Obra gruesa
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Paisajismo
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Seguridad
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Terminaciones
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+								li
+									a(href="catalog.html") Otros
+									ul: +loop(4)
+										li: a(href="catalog.html")
+											+lorem(1)
+											span.header__fullnav__counter: +num(50)
+
+				.col-md-7
+					.header__fullnav__recomends
+						+loop(8)
+							.header__fullnav__recomend
+								h4 Recomendados en&nbsp;
+									+lorem(1)
+								.cols.cols-gutter-min
+									.col-xs-12.col-lg-6
+										+articleProduct(1,"Assay Abloy / Puertas","Puerta Cortafuego sentido encontrado RF 120 ODIS","min")
+									.col-xs-12.col-lg-6
+										+articleProduct(2,"Femoglas / Cubiertas onduladas","Panel PV6 / PT-60 (FRP)","min")
+									.col-xs-12.col-lg-6
+										+articleProduct(3,"Polymerland / Túneles solares","Revestimiento acústico para cielo diseño Dispar 8","min")
+									.col-xs-12.col-lg-6
+										+articleProduct(4,"Assay Abloy / Puertas","Puerta Cortafuego sentido encontrado RF 120 ODIS","min")
+
+
+
+	.header__fullnav.header__fullnav--brands
+		.header__fullnav__bg
+		.header__fullnav__inner
+			.cols
+				+loop(4)
+					.col-md-3
+						ul: +loop(10)
+							li: a(href="#")
+								+lorem(1)
+								span.header__fullnav__counter: +num(50)
+

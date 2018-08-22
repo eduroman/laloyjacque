@@ -1,0 +1,173 @@
+footer
+	background $dark
+	color $gray
+	text-align left
+	font-size $global-size-sm
+	position relative
+	z-index 3
+
+	.footer__title
+		color $gray
+		font-size $global-size-sm
+		text-transform uppercase
+		margin-bottom 10px
+		font-weight normal
+
+	.footer__description
+		font-size $global-size-md
+
+	.footer__wrap
+		max-width $limit
+		margin 0 auto
+		position relative
+		padding 40px 20px
+		@media $break-md
+			padding 40px 40px
+		&.footer__wrap--terms
+			padding 15px 20px
+
+	.footer__stats
+		padding-bottom 20px
+		border-bottom 1px solid rgba(255, 255, 255, .1)
+		text-align center
+		@media $break-lg
+			text-align left
+			border-bottom 0px
+			padding 0px
+			padding-right 20px
+		.footer__logo
+			display inline-block
+			margin-bottom 10px
+			img
+				width 120px
+		.footer__stat
+			text-align center
+			vertical-align middle
+			display inline-block
+			margin 0 10px
+			@media $break-lg
+				margin 0
+				margin-right 30px
+			.footer__stat__icon
+				circle(65px,2)
+				display block
+				margin 0 auto
+				border 1px solid rgba(255, 255, 255, .2)
+				text-align center
+				margin-bottom 10px
+				img
+					display inline-block
+					vertical-align middle
+					width 30px
+			.footer__stat__number
+				font-size 18px
+				font-weight bold
+				color $color
+				display block
+			.footer__stat__title
+				display block
+				text-transform uppercase
+				font-family $font2
+				font-size $global-size-xxs
+
+	.footer__menu
+		@media $break-sm
+			border-bottom 0px
+			padding 0px 20px
+		.footer__nav
+			padding-bottom 20px
+			border-bottom 1px solid rgba(255, 255, 255, .1)
+			@media $break-sm
+				border-bottom 0px
+			.footer__nav__link
+				ul
+					li
+						margin-bottom 10px
+						a
+							color $gray
+							opacity .7
+							font-weight lighter
+							transition .5
+							&:hover
+								opacity 1
+
+	.footer__newsletter
+		padding 20px 0px
+		border-bottom 1px solid rgba(255, 255, 255, .1)
+		text-align center
+		@media $break-sm
+			border-bottom 0px
+			padding 0px
+		.footer__title
+			text-align left
+		form
+			input
+				padding 11px 15px
+				color white
+				border-color rgba(white,10%)
+			button
+				position absolute
+				top 4px
+				right 4px
+
+
+	.footer__social
+		padding-top 20px
+		text-align center
+		@media $break-sm
+			text-align left
+		.footer__title
+			text-align center
+			@media $break-sm
+				text-align left
+		ul
+			li
+				display inline-block
+				a
+					display inline-block
+					circle(35px,1)
+					padding 0
+					line-height 30px
+					background-color $color
+					color white
+					margin-right 2px
+					font-size $global-size-md
+					&:hover
+						background-color white
+						color $color
+					.fa
+						vertical-align middle
+
+	.footer__logos
+		border-bottom 1px solid rgba(255, 255, 255, .1)
+		@media $break-sm
+			border-bottom 0px
+			padding 0px 20px
+		.footer__partner
+			margin-bottom 10px
+		.footer__partner__logo
+			vertical-align middle
+			display inline-block
+			opacity .5
+			transition .5s
+			margin-right 10px
+			margin-bottom 10px
+			@media $break-md
+				margin-right 15px
+			img
+				margin 0 auto
+				max-width 60px
+				max-height 40px
+				@media $break-md
+					max-width 100px
+					max-height 60px
+
+	.footer__secondary
+		background-color rgba(0,0,0,.5)
+		opacity .5
+		padding 5px 0
+		.footer__terms
+			text-align center
+			.footer__description
+				font-size $global-size-xxs
+				line-height 15px

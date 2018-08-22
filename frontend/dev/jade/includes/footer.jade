@@ -1,0 +1,189 @@
+footer
+	.footer__primary
+		.footer__wrap
+			.cols
+				.col-xs-12.col-md-12.col-lg-4
+					.footer__stats
+						.footer__logo
+							img(src="img/logo-bimtool-white.png")
+						p.footer__description Bimtool es el repositorio más grande de productos para la construcción y la arquitectura.
+
+						.footer__stat
+							.footer__stat__icon
+								img(src="img/icons/3.png")
+							stronge.footer__stat__number 163.725
+							span.footer__stat__title Descargas
+
+						.footer__stat
+							.footer__stat__icon
+								img(src="img/icons/1.png")
+							stronge.footer__stat__number 6.925
+							span.footer__stat__title Productos
+
+						.footer__stat
+							.footer__stat__icon
+								img(src="img/icons/2.png")
+							stronge.footer__stat__number 42
+							span.footer__stat__title Marcas
+
+				.col-xs-12.col-md-6.col-lg-4
+					.footer__logos
+						.row
+							.col-xs-4.col-md-12
+								.footer__partner
+									h4.footer__title Asociados a
+									.footer__partner__logo
+										img(src="img/logo-cchc.png")
+							.col-xs-8.col-md-12
+								.footer__partner
+									h4.footer__title Proyecto apoyado por
+									.footer__partner__logo
+										img(src="img/logo-3e.png")
+									.footer__partner__logo
+										img(src="img/logo-corfo.png")
+									.footer__partner__logo
+										img(src="img/logo-gob.png")
+				.col-xs-12.col-md-6.col-lg-4
+					.footer__menu
+						.footer__nav
+							.cols
+								.col-xs-6
+									.footer__nav__link
+										h4.footer__title Nosotros
+										ul.footer__list
+											li: a(href="#") ¿Quienes somos?
+											li: a(href="#") ¿Eres fabricante?
+											li: a(href="#") Acerca de BIM
+											li: a(href="#") Contacto
+
+								.col-xs-6
+									.footer__nav__link
+										h4.footer__title Colaboraciones
+										ul
+											li: a(href="#") ENGworks
+											li: a(href="#") Planok
+											li: a(href="#") GuarelloARQ
+											li: a(href="#") Ondac
+
+						.footer__newsletter
+							h4.footer__title Newsletter
+							form.form.footer__form
+								input(type="email", name="email", placeholder="Email...")
+								button.btn.btn--dark.btn--sm SUSCRIBIRME
+
+						.footer__social
+							h4.footer__title Síguenos
+							ul
+								li: a(href="#")
+									span.fa.fa-facebook
+								li: a(href="#")
+									span.fa.fa-twitter
+								li: a(href="#")
+									span.fa.fa-instagram
+								li: a(href="#")
+									span.fa.fa-linkedin
+	.footer__secondary
+		.footer__wrap.footer__wrap--terms
+			.footer__terms
+				.footer__description ®Todos los derechos reservados: Bimtool 2018. Prohibida su reproducción total o parcial.
+
+
+
+
+.modal.modal--login.modal--md
+	.modal__back
+	.modal__front
+		.modal__box
+
+			.modal__close
+				span.fa.fa-close
+
+			.modal__content
+
+				//.cols.cols-gutter-2
+				//	.col-xs-12.col-sm-6.col-sm-push-6
+
+				.login
+					.login__box.login__box-a
+
+						.tabs
+
+							.tabs__header.tab__header--title
+								.tab Ingresar
+								.tab Regístrate
+
+							.tabs__body
+
+								.tab
+									form.form
+										.form__element
+											.form__element__title Email
+											.form__element__input
+												input(type="email" name="email" autocomplete="off")
+										.form__element
+											.form__element__title Contaseña
+											.form__element__input
+												input(type="password" name="password" autocomplete="off")
+
+										.form__terms <a href="#" target="_blank">¿Olvidaste tu contraseña?</a>
+										.form__btn
+											button.btn.btn--block.btn--color(href="#") Ingresar
+
+								.tab
+									form.form
+										.form__element
+											.form__element__title Nombre
+											.form__element__input
+												input(type="text" name="firstname" autocomplete="off")
+										.form__element
+											.form__element__title Apellido
+											.form__element__input
+												input(type="text" name="lastname" autocomplete="off")
+										.form__element
+											.form__element__title Email
+											.form__element__input
+												input(type="email" name="email" autocomplete="off")
+										.form__element
+											.form__element__input
+												select(type="text" name="country")
+													option(value="#") Chile
+													option(value="#") Perú
+													option(value="#") Argentina			
+										.form__element
+											.form__element__title Contaseña
+											.form__element__input
+												input(type="password" name="password" autocomplete="off")
+										.form__checks
+											label
+												input(type="radio" name="type" value="student")
+												|  Soy estudiante
+											label
+												input(type="radio" name="type" value="professional")
+												|  Soy profesional
+
+										.form__terms Al registrarte en Bimtool aceptas nuestros <a href="#" target="_blank">términos y condiciones</a>.
+										.form__btn
+											button.btn.btn--block.btn--color(href="#") Registrarme
+
+					//.col-xs-12.col-sm-6.col-sm-pull-6
+					.login__box.login__box-b
+						.bg: img(src="uploads/1.jpg")
+
+						h4 Continuar con:
+
+						.login__connect
+							a.btn.btn--block.btn--border-white.btn--facebook(href="#")
+								span.fa.fa-facebook
+								|  Facebook
+						.login__connect
+							a.btn.btn--block.btn--border-white.btn--linkedin(href="#")
+								span.fa.fa-linkedin
+								|  Linkedin
+						.login__connect
+							a.btn.btn--block.btn--border-white.btn--google(href="#")
+								span.fa.fa-google
+								|  Google
+
+
+
+

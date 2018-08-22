@@ -1,0 +1,73 @@
+
+mixin articleBox(img, title)
+	article.article--box.dscroll
+		.article__bg
+			.bg: img(src="img/"+img+".png")
+		.article__space
+		.article__button
+			a.btn.btn--link.btn--link--white(href="#")
+				=title
+				span.fa.fa-angle-right
+
+mixin articleProduct(img,subtitle,title,extraclass)
+	- extraclass = "article--"+extraclass
+	article.article--product.dscroll(class=extraclass)
+		.article__img(data-img="img/products/"+img+".png")
+		.article__body
+			p.article__category=subtitle
+			h3.article__title: a(href="product.html")=title
+		.article__footer
+			.article__btn
+				a.btn.btn--link.btn--link--color(href="product.html") Ver producto
+					span.fa.fa-angle-right
+			.article__price $40.000
+
+mixin articleFormat(img,title)
+	article.article--format
+		.article__icon
+			img(src="img/icons/"+img+".png")
+		span.article__name=title
+
+mixin articleNews(img, title)
+	article.article--news.dscroll
+		.article__bg
+			.bg: img(src="img/news/"+img+".png")
+		.article__grad
+		.article__content
+			h3.article__title=title
+			a.btn.btn--link.btn--link--white(href="#") Leer más
+				span.fa.fa-angle-right
+
+
+
+
+mixin articleCart(img,subtitle,title)
+
+	article.article--product.article--cart.dscroll
+		.article__img(data-img="img/products/"+img+".png")
+		.article__body
+			p.article__category=subtitle
+			h3.article__title: a(href="product.html")=title
+			.article__price $40.000
+			.article__form
+				textarea(name="comment" placeholder="Escribe un comentario al proveedor...")
+		.article__remove: span.fa.fa-trash
+
+
+mixin articleProject(img,subtitle,title)
+
+	article.article--project.dscroll
+		.article__images
+			.cols.cols-gutter-sm
+				.col-xs-6: .article__img(data-img="img/products/1.png")
+				.col-xs-6: .article__img(data-img="img/products/2.png")
+				.col-xs-6: .article__img(data-img="img/products/3.png")
+				.col-xs-6: .article__img(data-img="img/products/4.png")
+		.article__body
+			h3.article__title: a(href="project.html"): +lorem(4)
+			.article__description: +lorem(10)
+			.article__btn
+				a.btn.btn--link.btn--link--color(href="project.html") Ver proyecto
+					span.fa.fa-angle-right
+
+

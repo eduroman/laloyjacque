@@ -1,0 +1,96 @@
+
+.modal
+	cover(fixed)
+	z-index $z-index-modal
+	display none
+
+	.modal__back
+		cover(absolute)
+		background rgba($dark,.8)
+
+	.modal__front
+		position relative
+		height 100%
+		display table-cell
+		text-align center
+		vertical-align middle
+
+	.modal__box
+		padding 30px
+		margin 20px
+		border-radius $rad
+		background white
+		max-width 500px
+		position relative
+		text-align left
+		overflow auto
+		max-height 100%
+		@media $break-md
+			margin 20px auto
+			padding 40px
+
+	.modal__content
+		font-family $font2
+		color $dark
+		.modal__title
+			margin-bottom 10px
+			font-weight 300
+			font-size $title_h3
+			&.modal__title--sm
+				font-size $title_h4
+				
+		.modal__message
+			margin-bottom 20px
+			opacity .5
+	
+	.modal__social
+		.modal__social__icon
+			display inline-block
+			circle 35px,1px
+			background $color
+			color white
+			margin 2px 5px 0 0
+			&:hover
+				border 1px solid $lighter
+				background white
+				color $gray
+			.fa
+				vertical-align 0
+						
+	.modal__email
+		padding-bottom 20px
+		border-bottom 1px solid rgba(255, 255, 255, .1)
+		form
+			input
+				padding 11px 15px
+				color $global-color
+				border-color $light
+			button
+				position absolute
+				top 4px
+				right 4px	
+
+	.modal__close
+		position absolute
+		top 0
+		right 0
+		padding 10px 15px
+		opacity .5
+		&:hover
+			cursor pointer
+
+	&.modal--md
+		.modal__box
+			max-width 720px
+
+	&.modal--in
+		display table
+		animation fadeIn .5s ease
+		.modal__box
+			animation scaleFadeIn .5s .2s ease backwards
+
+	&.modal--out
+		display table
+		animation fadeOut .2s ease both
+		.modal__box
+			animation scaleFadeOut .2s ease both

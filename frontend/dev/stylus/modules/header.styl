@@ -1,0 +1,510 @@
+
+header
+
+	.header__bar
+		z-index $z-index-header
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height $header-height
+		line-height $header-height
+		transition .5s
+		background-color white
+		box-shadow $shadow
+
+		.header__wrap
+			padding 0 20px
+			position relative
+			max-width $limit
+			margin 0 auto
+
+		.header__logo
+			float left
+			margin-right 20px
+			width 100px
+			img
+				vertical-align middle
+				margin-top -2px
+				display inline-block
+
+		.header__right
+			float right
+			.header__search
+				display none
+				.fa
+					position absolute
+					top 50%
+					margin-top -8px
+					left 20px
+					font-size $global-size
+
+
+
+		.header__option
+			display inline-block
+			vertical-align middle
+			a
+				display inline-block
+				color $dark
+				opacity .5
+				padding 0 10px
+				font-size $global-size-md
+				&.header__option__country			
+					&:hover
+						ul
+							display block
+			ul
+				background $light
+				width 20%
+				position absolute
+				right 0
+				display none
+				padding 10px 0
+				border-radius $rad
+				animation fadeIn .5s ease
+				li
+					font-size $global-size-sm
+					padding 5px 20px
+					opacity 1
+					a
+						padding 10px 20px
+						opacity 1
+						color white					
+			
+
+		.header__login
+			vertical-align middle
+			display inline-block
+			circle(30px)
+			background-color $white
+			padding 0 10px
+			margin 0 10px
+			box-shadow 0px 2px 3px 0px rgba(0,0,0,.08)
+			a
+				color $dark
+				opacity .5
+
+		.header__ham
+			float right
+			width 40px
+			padding 20px 0
+			margin-right -10px
+			position relative
+			z-index 20
+			.header__ham__line
+				position relative
+				display block
+				width 20px
+				height 2px
+				margin 4px auto
+				background $dark
+				border-radius 5px
+				opacity .5
+				transition .2s ease
+				&:nth-child(1)
+					right 0px
+				&:nth-child(2)
+					right 2px
+				&:nth-child(3)
+					right 4px
+			&.header__ham--close
+				.header__ham__line
+					background-color white
+					transform rotate(45deg) translateX(28%) translateY(5px)
+					margin 2px auto 10px
+					&:last-child
+						transform rotate(-45deg) translateX(28%)
+					&:nth-child(2)
+						display none
+
+		.header__nav
+			display block
+			position fixed
+			height 100%
+			width 100%
+			top 0
+			right 0
+			background $dark
+			padding 60px 40px 0px
+			transition ease .4s
+			transform translateX(100%)
+			text-align center
+			&.on
+				transform translateX(0%)
+			.header__bg
+				opacity .1
+			.header__nav__logo
+				position relative
+				.header__nav__img
+					margin-bottom 20px
+				.header__description
+					position relative
+					color white
+					opacity .7
+					font-size $global-size-md
+					line-height 20px
+			ul
+				list-style none
+				padding-top 15px
+				li
+					position relative
+					border-top 1px solid rgba(255, 255, 255, .1)
+					&:last-child
+						border-top 1px solid rgba(255, 255, 255, .1)
+					a
+						text-transform uppercase
+						color white
+						display block
+						line-height 60px - 10
+						font-size $global-size-sm
+						font-family $font
+						padding 0 20px
+						&:before
+							content ""
+							circle(0px)
+							background-color $color
+							transition .2s ease
+							position absolute
+							top 44%
+							margin-left -10px
+						&.current
+							font-weight bold
+							&:before
+								circle(5px)
+						//&:hover
+						//	font-weight bold
+						span
+							display none
+					ul
+						display none		
+			.header__nav-close
+				span
+					display block
+					text-align right
+					padding 20px
+					font-size $global-size-md
+
+@media $break-lg-i
+
+	header
+
+		.header__bar
+			.header__search
+				position absolute
+				top 0
+				left 0
+				width 100%
+				background white
+				z-index $z-index-search
+				input
+					background transparent
+					color $dark
+					border 0
+					placeholder $gray
+					line-height 60px
+					padding 0 30px 0 50px
+
+		&.header--search-in
+			.header__bar
+				.header__search
+					display block
+					animation slideDown .4s $cb
+
+		&.header--search-out
+			.header__bar
+				.header__search
+					animation slideUpOut .4s $cb both
+
+
+@media $break-md
+
+	header
+
+		.header__bar
+			height $header-height-md
+			line-height $header-height-md
+
+			.header__wrap
+				padding 0 40px
+
+			.header__logo
+				margin-left 0px
+				width 120px
+
+			.header__ham
+				margin-right 0px
+
+			.header__login
+				a
+				&:hover
+					&>a
+						opacity 1
+					ul
+						display block
+				ul
+					
+					background $light
+					width 20%
+					position absolute
+					right 0
+					display none
+					padding 10px 0
+					border-radius $rad
+					animation fadeIn .5s ease
+					li
+						font-size $global-size-sm
+						padding 5px 20px
+						opacity 1
+						a
+							padding 10px 20px
+							opacity 1
+							color white
+					&:nth-child(1)	
+						&:hover
+							background-color rgba(0,0,0,.05)
+							font-weight bold
+							color $color	
+							
+
+
+			.header__nav
+				transition ease-in-out all .0s
+				.header__nav-close
+					display none
+				ul
+					padding-top 0
+
+			.header__option
+				.header__option__search
+					display none
+
+			.header__right
+				.header__search
+					position relative
+					display inline-block
+					margin-right 10px
+					input
+						border 1px solid $lighter
+						padding 10px
+						padding-left 35px
+						width 180px
+						color $gray
+						font-size $global-size-xs
+						opacity 1
+						font-family $font
+						&::placeholder
+							color $gray
+							opacity .6
+					.fa
+						position absolute
+						top 50%
+						margin-top -8px
+						margin-left -8px
+						font-size $global-size
+						color $gray
+
+
+
+@media $break-lg
+
+	header
+		.header__bar
+
+			.header__ham
+				display none
+
+			.header__nav
+				transform translateX(0%)
+				transition ease-in-out all .0s
+				position relative
+				top 0
+				padding 0
+				float left
+				background transparent
+				width auto
+				display block
+				height 70px
+				.header__nav__logo
+					display none
+				.header__bg
+					display none
+				ul
+					li
+						display inline-block
+						margin-right 20px
+						a
+							display inline-block
+							color $dark
+							opacity .9
+							font-family $font2
+							border 0
+							position relative
+							text-transform none
+							padding 0
+							line-height 70px
+							font-size $global-size-xs
+							span
+								display inline-block
+								margin-left 5px
+							&:after
+								content ""
+								position absolute
+								transition .2s ease
+								left 0
+								bottom 2px
+								width 0px
+								height 3px
+								background-color $color
+							&:hover
+								opacity 1
+								font-weight normal
+								&:after
+									width 100%
+							&.current
+								font-weight normal
+								&:after
+									width 100%
+								&:before
+									display none
+						&:hover
+							&>a
+								opacity 1
+								&:after
+									width 100%
+							ul
+								display block
+
+					ul
+						display none
+						background $lighter
+						z-index $z-index-header - 1
+						position absolute
+						top $header-height-md - 1
+						left 0
+						border-radius 0 0 $rad $rad
+						width 200px
+						margin 0
+						line-height $global-lh
+						padding 15px 0
+						animation fadeIn .5s ease
+
+						li
+							display block
+							margin 0
+							text-align left
+							font-size $global-size-sm
+							a
+								color $dark
+								opacity 1
+								text-transform none
+								font-weight normal
+								padding 10px 20px
+								display block
+								line-height 10px
+								&:after
+									display none
+								&:hover
+									background-color rgba(0,0,0,.05)
+									font-weight bold
+									color $color
+									
+
+
+
+
+.header__fullnav
+	position fixed
+	top $header-height-md
+	left 0
+	width 100%
+	height 100%
+	line-height $global-lh
+	display none
+	padding 0 40px
+	animation fadeIn .2s ease backwards
+	z-index $z-index-header - 1
+	@media $break-lg
+		&.hover
+			display block
+			&.out
+				animation fadeOut .2s ease both
+
+
+	a
+		display block
+		padding 5px 20px
+		color $dark
+		&:hover
+			color $color
+
+	.header__fullnav__bg
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background rgba($dark,.8)
+
+	.header__fullnav__inner
+		position relative
+		max-width $limit - 80px
+		margin 0 auto
+		padding 20px
+		background-color $lighter
+		border-radius 0 0 ($rad*2) ($rad*2)
+		box-shadow $shadow2
+		animation slideFadeDown .4s ease backwards
+
+		.header__fullnav__nav
+			ul
+				position relative
+				width 50%
+				li
+					a
+						padding 10px 20px
+					ul
+						background white
+						height 100%
+						width 100%
+						position absolute
+						top 0
+						left 100%
+						display none
+						padding 15px 0
+						border-radius $rad
+						li
+							font-size $global-size-sm
+							a
+								padding 5px 20px
+					&.hover
+						&>a
+							border-radius $rad
+							background-color rgba(0,0,0,.05)
+							font-weight bold
+							border-radius $rad 0 0 $rad
+						ul
+							display block
+							li
+								font-weight normal
+
+	.header__fullnav__counter
+		opacity .5
+		color $gray
+		float right
+
+	.header__fullnav__recomends
+		padding 0 20px
+		border-left 1px solid $light
+		h4
+			font-weight 300
+		.header__fullnav__recomend
+			display none
+			&.hover
+				display block
+
+
+
+
+
+

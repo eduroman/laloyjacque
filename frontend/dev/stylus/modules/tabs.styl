@@ -1,0 +1,53 @@
+
+.tabs
+
+	.tabs__header
+		overflow auto
+		white-space nowrap
+		margin-bottom 10px
+		display block
+		&.tabs__header--right	
+			@media $break-md
+				display inline-block
+				float right
+		.tab
+			display inline-block
+			transition .2s ease
+			position relative
+			padding 10px 0
+			font-weight normal
+			margin-right 10px
+			opacity .4
+
+			&:after
+				content ""
+				position absolute
+				transition .2s ease
+				left 0
+				bottom 0px
+				width 0%
+				height 2px
+				background-color $color
+
+			&:hover
+				opacity .6
+				cursor pointer
+
+			&.tab--active
+				opacity 1
+				&:after
+					width 100%
+
+		&.tab__header--title
+			.tab
+				font-size $title_h4
+
+	.tabs__body
+		.tab
+			display none
+			&.tab--active
+				display block
+
+
+
+

@@ -1,0 +1,108 @@
+
+// Reset
+
+*
+	margin 0
+	padding 0
+	border 0
+	outline 0
+	box-sizing border-box
+
+
+// Base styles
+
+body
+	-webkit-font-smoothing antialiased
+	background $global-bg
+
+body, button, input, textarea, select
+	font-family $font
+	font-size $global-size
+	line-height $global-lh
+	color $global-color
+
+a, button, input, textarea, select
+	transition .2s ease
+
+a
+	color $color
+	text-decoration none
+	&.a-classic
+		text-decoration underline
+	&:hover
+		cursor pointer
+
+button
+select
+label
+input[type='checkbox']
+input[type='radio']
+	&:hover
+		cursor pointer
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5
+	margin-bottom $sep
+	font-family $font2
+	font-weight bold
+
+p
+	margin-bottom $sep
+
+h1
+.h1
+	title h1
+
+h2
+.h2
+	title h2
+
+h3
+.h3
+	title h3
+
+h4
+.h4
+	title h4
+
+h5
+.h5
+	title h5
+
+ul
+ol
+	list-style-type none
+
+img
+	display block
+	width auto
+	height auto
+	max-width 100%
+	margin 0 auto
+
+svg
+	display block
+	max-width 100%
+
+
+table
+	width 100%
+	border-collapse collapse
+	background-color transparent
+	font-size $global-size-xs
+	text-align left
+	tr
+		border-top 1px solid $lighter
+		&:last-child
+			border-bottom 1px solid $lighter
+		th
+			font-weight 400
+			padding 5px 15px 5px 0
+		td
+			opacity .6
+			padding 5px 15px 5px 0
+		@media $break-md
+			th
+			td
+				padding 10px 20px 10px 0
+
+

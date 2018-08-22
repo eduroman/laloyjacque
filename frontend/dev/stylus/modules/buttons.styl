@@ -1,0 +1,133 @@
+.btn
+	text-decoration none
+	background-color transparent
+	color white
+	display inline-block
+	padding 12px 30px
+	border 1px solid transparent
+	border-radius 2px
+	vertical-align middle
+	text-transform uppercase
+	line-height $global-lh
+	font-size $global-size-xxs
+	font-weight bold
+	font-family $font
+	transition .2s ease
+	text-align center
+	letter-spacing 1px
+
+	&:hover
+		background-color white
+		color $color
+		cursor pointer
+
+	// Variants
+
+	&.btn--sm
+		padding 6px 15px 5px
+
+	&.btn--color
+		background-color $color
+		color $white
+		&:hover
+			background-color lighten($color,20%)
+			color $white
+
+	&.btn--light
+		background-color $light
+		color $gray
+
+	&.btn--dark
+		background-color $dark_button
+		color $gray
+		&:hover
+			background-color $color
+			color $white
+
+	&.btn--transparent
+		background-color transparent
+		color $gray
+		
+
+	&.btn--white
+		background-color white
+		color $gray
+		box-shadow $shadow
+		&:hover
+			background-color $light
+
+	&.btn--border-white
+		border-color rgba(255,255,255,.2)
+		background-color transparent
+		color white
+		&:hover
+			background-color $color
+			border-color transparent
+			color white
+
+	&.btn--sm
+		padding 7px 15px
+
+	&.btn--block
+		width 100%
+		display block
+		padding-right 5px
+		padding-left 5px
+
+
+
+	&.btn--link
+		border 0
+		color $color
+		padding-left 0
+		padding-right 0
+		//padding 7px 0px
+		font-weight bold
+		font-family $font
+		background-color transparent
+			&:hover
+				background-color transparent
+				color white
+			
+		&.btn--link--white
+			color white
+			&:hover
+				background-color transparent
+				color $color
+
+	&.btn--facebook
+		&:hover
+			background-color $color-facebook
+
+	&.btn--linkedin
+		&:hover
+			background-color $color-linkedin
+
+	&.btn--google
+		&:hover
+			background-color $color-googleplus
+
+
+	.fa
+		margin-right 5px
+		&.fa-chevron-right
+		&.fa-angle-right
+			margin-right 0
+			margin-left 5px
+	
+	&.btn--overview
+		border-radius 0px
+		background-color $color
+		line-height 27px	
+		&:hover
+			background-color lighten($color,20%)
+			color $white
+			
+	&.btn--download
+		padding 5px 15px
+		background-color $color
+		color $white
+		font-size 9px
+		&:hover
+			background-color lighten($color,20%)
+			color $white

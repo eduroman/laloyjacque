@@ -1,0 +1,217 @@
+
+
+#sections
+	padding-top $header-height
+	overflow hidden
+	@media $break-md
+		padding-top $header-height-md
+
+section
+	position relative
+
+	// Elements
+
+	.section__bg
+		cover(absolute)
+		opacity .25
+
+	.section__grad
+		cover(absolute)
+		grad($dark,'bottom')
+
+	.section__wrap
+		padding $sep
+		position relative
+		max-width $limit
+		margin 0 auto
+		@media $break-md
+			padding $sep*2
+		&.section__wrap--sm
+			padding-top 20px
+			padding-bottom 20px
+
+	.section__content
+		position relative
+		max-width 720px
+		margin 0 auto
+		text-align left
+		@media $break-md
+			text-align center
+		&>*
+			animation slideFadeUp .5s ease backwards
+			animation-stagger(20,.2s)
+
+		&.section__content--va
+			line-height 208px
+			height 208px
+			.section__content__va
+				line-height $global-lh
+				display inline-block
+				vertical-align middle
+				&>*
+					animation slideFadeUp .5s ease backwards
+					animation-stagger(20,.2s)
+
+		&.section--left
+			text-align left
+
+		&.section--right
+			text-align right
+
+		&.section--center
+			text-align center
+
+		&.section--justify
+			text-align justify
+
+	.section__title
+		font-weight 300
+		animation-stagger(20, .2s)
+		strong
+			color $color
+
+	.section__effect
+		&>*
+			animation slideFadeUp .5s ease backwards
+			animation-stagger(20,.2s)
+
+
+	// Variants
+
+	&:nth-child(even)
+		background $white
+
+	&.section--white
+		background $white
+
+	&.section--dark
+		background $dark
+		color $white
+
+	&.section--lighter
+		background $lighter
+
+	&.section--light
+		background $light
+
+	&.section--transparent
+		background transparent
+
+
+	// Types
+
+	&.section--header
+		background $dark
+		color white
+		.section__description
+			font-size $global-size-md
+			font-weight 300
+			max-width 600px
+			&:last-child
+				margin-bottom 0
+
+		.section__buttons
+			@media $break-md
+				float right
+				padding-top 10px
+			.btn
+				margin 0 0 5px 5px
+
+	&.section--main
+		margin 0 auto
+		text-align center
+		padding 60px 0 180px
+		@media $break-md
+			padding 100px 0 200px
+
+		.section__slider
+			z-index 1
+			cover(absolute)
+
+		.section__wrap
+			z-index 2
+
+		.section__bg
+			opacity .1
+
+		.section__search
+			margin 0 auto
+			position relative
+			max-width 500px
+			input
+				color white
+				border-color rgba(white,20%)
+			button
+				position absolute
+				top 0
+				right 0
+				font-size $global-size-md
+				background-color $color
+				border-radius 0px 4px 4px 0px
+				color white
+				padding 16px 15px
+				@media $break-md
+					padding 16px 30px
+
+	&.section--offset-top
+		z-index 2
+		margin-top -140px
+
+	&.section--products
+		width 100%
+		.section__title
+			@media $break-md
+				display inline-block
+		.section__button
+			width 100%
+			text-align center
+			margin 20px 0px
+			@media $break-md
+				margin 40px 0px
+		.section__formats
+			text-align left
+			@media $break-md
+				text-align center
+			.section__title
+				opacity .5
+				margin-bottom 10px
+				@media $break-md
+					font-size $global-size-lg
+			.section__formats--list
+				overflow auto
+				white-space nowrap
+				text-align center
+				margin 0 -20px
+				padding 0px 20px
+				&>*
+					animation slideFadeUp .5s ease backwards
+					animation-stagger(20,.2s)
+	
+	&.section--news
+		.section__title
+			@media $break-md
+				display inline-block
+				
+
+
+	&.section--fixed
+		background-color white
+		padding 10px
+		width 100%
+		position fixed
+		bottom 0
+		z-index $z-index-fixed
+		animation slideUp 2s ease backwards
+		@media $break-md
+			display none
+		.section__img
+			img
+				max-width 80px
+		.section__buttons
+			.section__title
+				margin-bottom 0
+				font-size $global-size-sm
+			span
+				float none
+
+

@@ -1,0 +1,231 @@
+
+.form
+	position relative
+	&>*
+		animation slideFadeUp .5s ease backwards
+		animation-stagger(20,.1s,.2s)
+
+	.form__search
+		input , textarea
+			border-color rgba(255,255,255,.2)
+
+	.form__checkbox
+		transition .1s
+		margin-bottom 20px
+		margin-top 10px
+		position relative
+		display none
+		&>*
+			animation slideFadeUp .5s ease backwards
+			animation-stagger(20,.1s)
+		&:hover
+			cursor text
+		&.form__checkbox--show
+			display block
+		.form__checkbox__item
+			position relative
+			display block
+			width 100%
+			text-align left
+			border-top 1px solid rgba(255, 255, 255, .1)
+			&:last-child
+				border-bottom 1px solid rgba(255, 255, 255, .1)
+			input
+				margin-right 15px
+				opacity .2
+				&:checked
+					opacity 1
+			span
+				transition .5s
+				position absolute
+				top 15px
+				left 2px
+				color $gray
+		label
+			display block
+			padding 10px 0
+
+		.form__checkbox__item--selected
+			span
+				color $color
+
+	.form__buttons
+		overflow hidden
+		.btn:first-child
+			float left
+		.btn:last-child
+			float right
+
+
+
+.form__checks
+	padding 10px 0 20px
+	margin-bottom 10px
+	border-bottom 1px solid $lighter
+
+.form__element
+	padding-top 10px
+	margin-bottom 10px
+	position relative
+	display block
+	//border-top 1px solid $lighter
+	&:hover
+		cursor text
+
+	.form__element__title
+		color $dark
+		font-weight 500
+		position absolute
+		top 15px
+		left 0
+		transition .2s ease
+		transform-origin left top
+		opacity .5
+
+	.form__element__input
+		border-bottom 1px solid $lighter
+		input , textarea, select
+			padding 10px 0
+			border 0
+			margin 0
+			background-color white
+			color $dark
+			box-shadow 0 0 0 30px white inset
+
+	&:after
+		content ""
+		position absolute
+		bottom 0
+		left 0
+		width 0%
+		height 2px
+		border-radius 2px
+		background $color
+		transition .5s
+
+	&.form__element--focused
+		&:after
+			width 100%
+
+	&.form__element--focused
+	&.form__element--filled
+		.form__element__title
+			top 0
+			transform scale(.75)
+
+.form__terms
+	margin-bottom 15px
+	font-size $global-size-xs
+	color $gray
+
+.form__btn
+	margin-top 20px
+
+.form__filter
+	position relative
+	display inline-block
+	width 100%
+	text-align center
+	padding 10px 5px
+	border 1px solid rgba(255, 255, 255, .2)
+	border-radius 3px
+	transition .2s
+	cursor pointer
+	&:after
+		content ""
+		position absolute
+		bottom -6px
+		right 50%
+		margin-right -5px
+		border-left 6px solid transparent
+		border-right 6px solid transparent
+		border-top 6px solid white
+		display none
+
+	.form__icon
+		circle(50px)
+		display block
+		margin 0 auto
+		border 1px solid rgba(255, 255, 255, .2)
+		text-align center
+		font-size $global-size-lg
+		font-weight normal
+		margin-bottom -10px
+
+	.form__number
+		background-color $gray
+		padding 0 5px
+		color white
+		border-radius 3px
+		font-weight bold
+		display inline-block
+		font-size $global-size-xs
+
+	.form__title
+		font-family $font
+		text-transform uppercase
+		font-size 9px
+		letter-spacing 1px
+		font-weight bold
+		@media $break-sm
+			font-size $global-size-xxs
+
+	.form__close
+		position absolute
+		top 2px
+		right 8px
+		color $dark
+		display none
+		opacity .2
+
+	&.current
+		background-color $white
+		color $dark
+		.form__icon
+			border 1px solid $light
+		.form__number
+			background-color $color
+		.form__close
+			display block
+		&:after
+			display block
+
+	@media $break-md
+
+		.form__icon
+			float left
+			circle 40px
+			margin -5px 0
+			font-size $global-size
+
+		.form__number
+			float left
+			margin 5px 0 0 -10px
+
+		.form__title
+			padding 5px 0
+
+
+.form.form--filters
+
+	.form__filters
+		margin-bottom 20px
+
+	@media $break-md
+
+		.form__filters
+			margin-right 160px
+			margin-bottom 0
+
+		.form__buttons
+			position absolute
+			top -42px
+			right 0
+			.btn
+				float none
+				display block
+
+
+
+
+

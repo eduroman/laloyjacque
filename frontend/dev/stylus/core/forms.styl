@@ -1,0 +1,61 @@
+
+
+input
+select
+textarea
+	-webkit-appearance none
+	box-sizing border-box
+	appearance none
+	border 1px solid $light
+	display block
+	width 100%
+	background-color transparent
+	padding 15px
+	border-radius 3px
+	color $global-color
+	font-size $global-size
+	&::placeholder
+		color $light
+	&:focus
+		border-color color
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance none
+	margin 0
+
+input[type=checkbox]
+input[type=radio]
+	width 18px
+	height @width
+	display inline-block
+	vertical-align -4px
+	margin-right 5px
+	padding 0
+	border none
+	background $light url('../img/icon-checked.png') 50% -100% no-repeat
+	border 1px solid $light
+	&:checked
+		background $color url('../img/icon-checked.png') 50% 50% no-repeat
+		border-color $color
+
+input[type=radio]
+	border-radius 10px
+
+select
+	display inline-block
+	border none
+	background-color $light
+	color $gray
+	opacity 1
+	padding 10px 15px
+	margin-bottom 0
+
+label
+	display inline-block
+	margin-right 10px
+
+
+
+
+
